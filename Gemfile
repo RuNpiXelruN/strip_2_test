@@ -8,6 +8,7 @@ gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 group :production do
@@ -20,6 +21,7 @@ gem 'puma', '~> 3.0'
 
 
 gem 'devise'
+gem 'paperclip'
 
 
 

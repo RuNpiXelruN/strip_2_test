@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160618031542) do
+ActiveRecord::Schema.define(version: 20160618034121) do
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.text     "description"
+    t.integer  "price"
+    t.integer  "user_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.index ["user_id"], name: "index_products_on_user_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.string   "email"
+    t.string   "guid"
+    t.integer  "product_id"
+    t.string   "stripe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_sales_on_product_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
