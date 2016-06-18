@@ -5,6 +5,16 @@ source 'https://rubygems.org'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 
 
+
+gem 'devise'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'stripe', source: 'https://code.stripe.com'
+gem 'figaro'
+gem 'httparty'
+
+
+
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -18,11 +28,6 @@ end
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-
-
-gem 'devise'
-gem 'paperclip'
-gem 'aws-sdk'
 
 
 
