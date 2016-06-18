@@ -22,6 +22,7 @@ gem 'puma', '~> 3.0'
 
 gem 'devise'
 gem 'paperclip'
+gem 'aws-sdk'
 
 
 
